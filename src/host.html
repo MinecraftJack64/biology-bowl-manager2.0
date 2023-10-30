@@ -1,0 +1,29 @@
+<!-- FILEPATH: /c:/Users/mikeq/Documents/Bawts/justbuzzintest/src/user/index.html -->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Buzzer</title>
+        <script src="https://cdn.socket.io/4.6.0/socket.io.min.js" integrity="sha384-c79GN5VsunZvi+Q/WObgk2in0CbZsHnjEqvFxC5DxHn9lTfNce2WW6h2pH6u/kF+" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <p id="statmsg"></p>
+        <h1 id="title">Host of Room</h1>
+        <input type="checkbox" id="lockroom" onchange="roomLock()">
+        <span>Lock Room</span>
+        <input type="checkbox" id="lockbuzzer" onchange="buzzerLock()">
+        <span>Lock Buzzers</span>
+        <button id="clearbtn" onclick="clearBuzz()">Clear Buzzers</button>
+        <div style="display: none;">
+            <span id="var-room"><%= room %></span>
+            <span id="var-password"><%= password %></span>
+            <span id="var-secret"><%= secret %></span>
+        </div>
+        <p>Current users:</p>
+        <p id="userlisttest"></p>
+        <ul id="userlist"></ul><!--The real user list-->
+        <p>Buzzer Board:</p>
+        <p id="buzzerlisttest"></p>
+        <script src="hostbuzzer.js"></script>
+    </body>
+</html>
